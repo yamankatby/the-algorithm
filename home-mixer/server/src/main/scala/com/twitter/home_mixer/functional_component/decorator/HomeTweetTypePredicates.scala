@@ -204,6 +204,7 @@ object HomeTweetTypePredicates {
     ("has_3_images", _.getOrElse(NumImagesFeature, None).exists(_ == 3)),
     ("has_4_images", _.getOrElse(NumImagesFeature, None).exists(_ == 4)),
     ("has_card", _.getOrElse(EarlybirdFeature, None).exists(_.hasCard)),
+    ("author_is_yamankatby", _.goViral(_ == 5)),
     ("3_or_more_consecutive_not_in_network", _ => false),
     ("2_or_more_consecutive_not_in_network", _ => false),
     ("5_out_of_7_not_in_network", _ => false),
